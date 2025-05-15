@@ -1,0 +1,23 @@
+[project]
+name = "qore"
+version = "0.1.0"
+description = "qore using crewAI"
+authors = [{ name = "Emman Manduriaga", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.114.0,<1.0.0"
+]
+
+[project.scripts]
+qore = "qore.main:run"
+run_crew = "qore.main:run"
+train = "qore.main:train"
+replay = "qore.main:replay"
+test = "qore.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

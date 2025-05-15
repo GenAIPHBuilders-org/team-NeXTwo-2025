@@ -1,0 +1,48 @@
+# Cash Flow Task
+cash_flow_task:
+  description: >
+    Monitor cash activity in real-time, detect upcoming shortfalls, and suggest quick fixes like fund rebalancing or reduced spending.
+  expected_output: >
+    Short and clear alert if cash is running low, with a simple suggestion (e.g., "Cash is tight. Hold off large expenses today.").
+  agent: cash_flow_agent
+  output_key: cash_flow
+
+
+# Budget Task
+budget_task:
+  description: >
+    Keep the budget aligned with your income and spending habits by creating, updating, or rebalancing categories as needed.
+  expected_output: >
+    Brief summary of any budget updates (e.g., "Dining limit reduced to ₱2,000. Transportation bumped up by ₱500.").
+  agent: budget_agent
+  output_key: budget
+
+
+# Savings Task
+savings_task:
+  description: >
+    Identify extra funds and adjust your savings plan to hit goals faster, adapting to financial changes automatically.
+  expected_output: >
+    Simple update on savings progress or goal adjustment (e.g., "You saved ₱3,000 this week. Goal moved 10% closer.").
+  agent: savings_agent
+  output_key: savings
+
+
+# Insights Task
+insights_task:
+  description: >
+    Generate easy-to-digest weekly summaries based on spending behavior, alerts, and tips from other agents.
+  expected_output: >
+    • Spend Summary  
+    • Behavior Alert  
+    • Quick Tip  
+    Each line is short and user-friendly (e.g., "Spent ₱12,300 this week. Dining up 20%. Tip: Cap dining at ₱2,000 next week.").
+  prompt_template: |
+    Given the following:
+    - Cash Flow: {{ cash_flow }}
+    - Budget: {{ budget }}
+    - Savings: {{ savings }}
+
+    Provide a combined financial insight for the user.
+  agent: insights_agent
+

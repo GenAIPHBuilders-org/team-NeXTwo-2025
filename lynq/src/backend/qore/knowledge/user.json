@@ -1,0 +1,144 @@
+{
+  "user": {
+    "name": "Juan Dela Cruz",
+    "demographics": {
+      "age": 40,
+      "gender": "Male",
+      "marital_status": "Married",
+      "dependents": 2,
+      "location": {
+        "city": "Makati",
+        "province": "Metro Manila",
+        "country": "Philippines"
+      }
+    },
+    "employment_income": {
+      "employment_status": "Employed",
+      "job_title": "Mid-level IT Manager",
+      "income_sources": ["Salary"],
+      "monthly_income": 100000,
+      "income_frequency": "Monthly"
+    },
+    "expenses": {
+      "fixed_monthly_expenses": {
+        "rent": 20000,
+        "utilities": 3000,
+        "subscriptions": 1000,
+        "insurance": 3000
+      },
+      "variable_monthly_expenses": {
+        "groceries": 15000,
+        "transportation": 5000,
+        "entertainment": 3000,
+        "dining": 4000,
+        "shopping": 3000
+      },
+      "debt_obligations": {
+        "credit_cards": 5000,
+        "loans": 7000,
+        "mortgages": 0
+      },
+      "major_upcoming_expenses": [
+        "Children's college tuition",
+        "House down payment"
+      ]
+    },
+    "financial_goals": {
+      "short_term_goals": [
+        "Build a 6-month emergency fund",
+        "Save for house down payment"
+      ],
+      "long_term_goals": [
+        "Fully fund college education for children",
+        "Own a family house within 5 years"
+      ],
+      "savings_goals": {
+        "target_amount": 20000,
+        "timeline": "Monthly"
+      }
+    },
+    "financial_habits_preferences": {
+      "budgeting_style": "Moderate",
+      "savings_behavior": "Automatic savings",
+      "risk_tolerance": "Moderate",
+      "preferred_alerts": [
+        "Monthly savings progress update",
+        "Large purchase alerts"
+      ]
+    },
+    "banking_cashflow": {
+      "bank_accounts_linked": true,
+      "credit_cards_and_loans": ["Personal Loan", "Credit Card"]
+    },
+    "budget": {
+      "categories": {
+        "necessities": 60,
+        "wants": 20,
+        "savings": 20
+      },
+      "tracking_frequency": "Monthly"
+    },
+    "savings": {
+      "emergency_fund": 100000,
+      "retirement_account": 300000
+    },
+    "weekly_expenses": {
+      "week_1": {
+        "fixed_expenses": {
+          "rent": 5000,
+          "utilities": 750,
+          "subscriptions": 250,
+          "groceries": 3750,
+          "transportation": 1250
+        },
+        "variable_expenses": {
+          "entertainment": 750,
+          "dining": 1000,
+          "shopping": 750
+        }
+      },
+      "week_2": {
+        "fixed_expenses": {
+          "rent": 5000,
+          "utilities": 750,
+          "subscriptions": 250,
+          "groceries": 3750,
+          "transportation": 1250
+        },
+        "variable_expenses": {
+          "entertainment": 750,
+          "dining": 1000,
+          "shopping": 750
+        }
+      },
+      "week_3": {
+        "fixed_expenses": {
+          "rent": 5000,
+          "utilities": 750,
+          "subscriptions": 250,
+          "groceries": 3750,
+          "transportation": 1250
+        },
+        "variable_expenses": {
+          "entertainment": 750,
+          "dining": 1000,
+          "shopping": 750
+        }
+      },
+      "week_4": {
+        "fixed_expenses": {
+          "rent": 5000,
+          "utilities": 750,
+          "subscriptions": 250,
+          "groceries": 3750,
+          "transportation": 1250
+        },
+        "variable_expenses": {
+          "entertainment": 750,
+          "dining": 1000,
+          "shopping": 750
+        }
+      }
+    }
+  }
+}

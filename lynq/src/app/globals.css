@@ -1,26 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --text-h1: 50px;
+  --text-h2: 40px;
+  --text-h3: 32px;  
+  --text-h4: 24px;
+  --text-h5: 18px;
+  --text-h6: 12px;
+  --color-background1: #F2F7FA;
+  --color-blue1: #BBE1FA;
+  --color-blue2: #3282B8;
+  --color-blue3: #0F4C75;
+  --color-blue4: #1B262C;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: url("../../public/background.svg");
+  background-size: cover;
+  color: gray;
+  font-family: monospace,Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Hovers for Component */
+#get-started:hover {
+  transform: scale(.90);
+  background-color: #328100;
+}
+
+#cards:hover {
+  transform: scale(.90);
+  border: 1px solid blue;
+}
+
+#x-button:hover {
+  transform: scale(.90);
+  background-color: #e4e4e4;
+  transition: transform .3s ease, background-color 0.3s ease;
 }
