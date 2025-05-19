@@ -3,7 +3,7 @@
 ---
 
 ## 🧑‍💻 Getting Started
-- Clone the repo
+- First is.. Clone the repo..
 
 ### Frontend (Next.js)
 
@@ -29,7 +29,7 @@ In another Terminal, follow these intructions..
 1. Navigate to the backend directory:
 
     ```bash
-    cd src/backend/qore
+    cd lynq/src/backend/qore
     ```
 
 2. Create a .venv file:
@@ -57,13 +57,20 @@ In another Terminal, follow these intructions..
     pip install -r requirements.txt
     ```
 
-5. Run the FastAPI server:
+5. While in `src/backend/qore`, create a `.env` file for API configuration. In your `.env` file write this:
+
+    ```bash
+    MODEL=gemini/gemini-1.5-flash
+    GEMINI_API_KEY=<YOUR_GEMINI_API>
+    ```
+
+6. Run the FastAPI server:
 
     ```bash
     uvicorn api:app --reload
     ```
 
-Goods na yan, then try to run Insights.
+Goods na yan.
 
 ---
 
