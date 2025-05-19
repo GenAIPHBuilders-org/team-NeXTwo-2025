@@ -116,7 +116,7 @@ const AnimatedInfoCard = () => {
                 ? "translate-y-0 opacity-100"
                 : "translate-y-30 opacity-0"
             }`}
-            style={{ transitionDelay: `${200 * card.id}ms` }}
+            // style={{ transitionDelay: `${200 * card.id}ms` }}
           >
             <div
               id="cards"
@@ -124,11 +124,11 @@ const AnimatedInfoCard = () => {
                 hover:shadow-2xl transition-all duration-300 cursor-pointer
                 ${animatingModal === card.id ? "scale-105 opacity-0" : ""}`}
               onClick={() => openModal(card.id)}
-              style={{
-                animation: isLoaded
-                  ? `float ${2.5 + card.id * 0.5}s ease-in-out infinite`
-                  : "none",
-              }}
+              // style={{
+              //   animation: isLoaded
+              //     ? `float ${2.5 + card.id * 0.5}s ease-in-out infinite`
+              //     : "none",
+              // }}
             >
               <div
                 className={`${card.bgColor} rounded-lg p-2 w-16 h-16 flex items-center justify-center mb-4 
