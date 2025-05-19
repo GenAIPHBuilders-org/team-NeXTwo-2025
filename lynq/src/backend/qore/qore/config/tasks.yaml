@@ -1,48 +1,75 @@
 # Cash Flow Task
 cash_flow_task:
   description: >
-    Monitor cash activity in real-time, detect upcoming shortfalls, and suggest quick fixes like fund rebalancing or reduced spending.
+    Monitor real-time cash activity, detect shortfalls, and suggest quick fixes.
   expected_output: >
-    Short and clear alert if cash is running low, with a simple suggestion (e.g., "Cash is tight. Hold off large expenses today.").
+    Clear 1–2 sentence alert in bullet format (e.g., "• Cash is tight. Delay big purchases.")
+  prompt_template: |
+    You are a cash flow assistant.
+    Respond in a single bullet point.
+    Be short (1–2 sentences max), direct, and helpful.
+    Suggest one quick action if needed.
+    No long explanations or extra context.
   agent: cash_flow_agent
   output_key: cash_flow
-
 
 # Budget Task
 budget_task:
   description: >
-    Keep the budget aligned with your income and spending habits by creating, updating, or rebalancing categories as needed.
+    Adjust budget categories to stay aligned with user income and spending behavior.
   expected_output: >
-    Brief summary of any budget updates (e.g., "Dining limit reduced to ₱2,000. Transportation bumped up by ₱500.").
+    Bullet-point summary of changes (e.g., "• Dining limit reduced to ₱2,000.")
+  prompt_template: |
+    You are a budget assistant.
+    Return a single bullet point summarizing the latest budget update.
+    Keep it short (1–2 sentences).
+    Mention only what changed. No elaboration.
   agent: budget_agent
   output_key: budget
-
 
 # Savings Task
 savings_task:
   description: >
-    Identify extra funds and adjust your savings plan to hit goals faster, adapting to financial changes automatically.
+    Detect extra funds and adjust savings plans to accelerate goal progress.
   expected_output: >
-    Simple update on savings progress or goal adjustment (e.g., "You saved ₱3,000 this week. Goal moved 10% closer.").
+    Bullet-style savings update (e.g., "• Saved ₱3,000. Goal 10% closer.")
+  prompt_template: |
+    You are a savings assistant.
+    Return one short bullet point summarizing progress or changes in savings.
+    Be concise (1–2 sentences). Use clear, friendly language.
   agent: savings_agent
   output_key: savings
-
 
 # Insights Task
 insights_task:
   description: >
-    Generate easy-to-digest weekly summaries based on spending behavior, alerts, and tips from other agents.
+    Serve as an A2A coordinator that integrates outputs from cash flow, budget, and savings agents to deliver a concise, user-focused financial summary.
   expected_output: >
-    • Spend Summary  
-    • Behavior Alert  
-    • Quick Tip  
-    Each line is short and user-friendly (e.g., "Spent ₱12,300 this week. Dining up 20%. Tip: Cap dining at ₱2,000 next week.").
-  prompt_template: |
-    Given the following:
-    - Cash Flow: {{ cash_flow }}
-    - Budget: {{ budget }}
-    - Savings: {{ savings }}
+    A weekly financial summary with three bullets:
+    • Spend Summary – 1–2 sentences summarizing critical cash flow or budget trends.
+    • Behavioral Insight – 1–2 sentences highlighting a user habit, opportunity, or risk.
+    • Actionable Recommendation – 1 practical, tailored suggestion based on the financial overview.
+    • Key Changes to Consider – 1–2 specific financial behaviors or settings the user should consider modifying based on the analysis.
 
-    Provide a combined financial insight for the user.
+    Each bullet is clear, user-centric, and ~25–30 words.
+    Synthesize agent outputs into meaningful insights, avoiding verbatim repetition.
+  prompt_template: |
+    You are the Insights Agent, acting as an agent-to-agent (A2A) summarizer.
+    Your role is to analyze and synthesize outputs from the following agents:
+
+    Cash Flow Agent: "{{ cash_flow }}"
+    Budget Agent: "{{ budget }}"
+    Savings Agent: "{{ savings }}"
+
+    Generate a weekly financial summary with:
+    • Spend Summary – a key takeaway from cash flow or budget trends.
+    • Behavioral Insight – a notable user pattern, opportunity, or risk.
+    • Actionable Recommendation – a practical, user-focused suggestion.
+    • Key Changes to Consider – 1–2 specific adjustments the user should make (e.g., budget limits, savings targets, or expense categories to monitor).
+
+    Keep each concise (1–2 sentences, ~25 words max).
+    Use clear, easy to understand, empathetic, and actionable language tailored to the user.
+    Synthesize insights by interpreting agent outputs, avoiding direct repetition.
   agent: insights_agent
+  output_key: insights
 

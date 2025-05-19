@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lynq AI",
+  title: "Lynq",
   description: "Lynq AI - Your Financial AI Assistant",
 };
 

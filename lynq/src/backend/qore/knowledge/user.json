@@ -32,113 +32,67 @@
         "entertainment": 3000,
         "dining": 4000,
         "shopping": 3000
-      },
-      "debt_obligations": {
-        "credit_cards": 5000,
-        "loans": 7000,
-        "mortgages": 0
-      },
-      "major_upcoming_expenses": [
-        "Children's college tuition",
-        "House down payment"
-      ]
-    },
-    "financial_goals": {
-      "short_term_goals": [
-        "Build a 6-month emergency fund",
-        "Save for house down payment"
-      ],
-      "long_term_goals": [
-        "Fully fund college education for children",
-        "Own a family house within 5 years"
-      ],
-      "savings_goals": {
-        "target_amount": 20000,
-        "timeline": "Monthly"
       }
-    },
-    "financial_habits_preferences": {
-      "budgeting_style": "Moderate",
-      "savings_behavior": "Automatic savings",
-      "risk_tolerance": "Moderate",
-      "preferred_alerts": [
-        "Monthly savings progress update",
-        "Large purchase alerts"
-      ]
-    },
-    "banking_cashflow": {
-      "bank_accounts_linked": true,
-      "credit_cards_and_loans": ["Personal Loan", "Credit Card"]
     },
     "budget": {
-      "categories": {
-        "necessities": 60,
-        "wants": 20,
-        "savings": 20
-      },
-      "tracking_frequency": "Monthly"
+      "week_1": [
+        { "date": "2025-05-12", "description": "Food", "amount": 700 },
+        { "date": "2025-05-13", "description": "Taxi", "amount": 300 },
+        { "date": "2025-05-14", "description": "Snacks", "amount": 200 },
+        { "date": "2025-05-15", "description": "Groceries", "amount": 1000 },
+        { "date": "2025-05-16", "description": "Coffee", "amount": 150 },
+        { "date": "2025-05-17", "description": "Laundry", "amount": 250 },
+        { "date": "2025-05-18", "description": "Misc", "amount": 400 }
+      ],
+      "week_2": [
+        { "date": "2025-05-19", "description": "Snacks", "amount": 250 },
+        { "date": "2025-05-20", "description": "Bus", "amount": 150 },
+        { "date": "2025-05-21", "description": "Lunch", "amount": 300 },
+        { "date": "2025-05-22", "description": "Dinner", "amount": 500 },
+        { "date": "2025-05-23", "description": "Groceries", "amount": 1100 },
+        { "date": "2025-05-24", "description": "Water", "amount": 100 },
+        { "date": "2025-05-25", "description": "Misc", "amount": 350 }
+      ]
     },
     "savings": {
-      "emergency_fund": 100000,
-      "retirement_account": 300000
+      "week_1": [
+        { "date": "2025-05-12", "description": "Deposit", "amount": 1500 },
+        { "date": "2025-05-13", "description": "Bonus", "amount": 2000 },
+        { "date": "2025-05-14", "description": "Interest", "amount": 300 },
+        { "date": "2025-05-15", "description": "Topup", "amount": 500 },
+        { "date": "2025-05-16", "description": "Extra", "amount": 1000 },
+        { "date": "2025-05-17", "description": "Gift", "amount": 700 },
+        { "date": "2025-05-18", "description": "Transfer", "amount": 800 }
+      ],
+      "week_2": [
+        { "date": "2025-05-19", "description": "Deposit", "amount": 1200 },
+        { "date": "2025-05-20", "description": "Bonus", "amount": 1800 },
+        { "date": "2025-05-21", "description": "Interest", "amount": 320 },
+        { "date": "2025-05-22", "description": "Topup", "amount": 600 },
+        { "date": "2025-05-23", "description": "Extra", "amount": 950 },
+        { "date": "2025-05-24", "description": "Refund", "amount": 400 },
+        { "date": "2025-05-25", "description": "Transfer", "amount": 850 }
+      ]
     },
-    "weekly_expenses": {
-      "week_1": {
-        "fixed_expenses": {
-          "rent": 5000,
-          "utilities": 750,
-          "subscriptions": 250,
-          "groceries": 3750,
-          "transportation": 1250
-        },
-        "variable_expenses": {
-          "entertainment": 750,
-          "dining": 1000,
-          "shopping": 750
-        }
-      },
-      "week_2": {
-        "fixed_expenses": {
-          "rent": 5000,
-          "utilities": 750,
-          "subscriptions": 250,
-          "groceries": 3750,
-          "transportation": 1250
-        },
-        "variable_expenses": {
-          "entertainment": 750,
-          "dining": 1000,
-          "shopping": 750
-        }
-      },
-      "week_3": {
-        "fixed_expenses": {
-          "rent": 5000,
-          "utilities": 750,
-          "subscriptions": 250,
-          "groceries": 3750,
-          "transportation": 1250
-        },
-        "variable_expenses": {
-          "entertainment": 750,
-          "dining": 1000,
-          "shopping": 750
-        }
-      },
-      "week_4": {
-        "fixed_expenses": {
-          "rent": 5000,
-          "utilities": 750,
-          "subscriptions": 250,
-          "groceries": 3750,
-          "transportation": 1250
-        },
-        "variable_expenses": {
-          "entertainment": 750,
-          "dining": 1000,
-          "shopping": 750
-        }
-      }
+    "cashflow": {
+      "week_1": [
+        { "date": "2025-05-12", "description": "Salary", "amount": 4000 },
+        { "date": "2025-05-13", "description": "Groceries", "amount": -1000 },
+        { "date": "2025-05-14", "description": "Dining", "amount": -800 },
+        { "date": "2025-05-15", "description": "Deposit", "amount": 2000 },
+        { "date": "2025-05-16", "description": "Taxi", "amount": -300 },
+        { "date": "2025-05-17", "description": "Transfer", "amount": -1000 },
+        { "date": "2025-05-18", "description": "Misc", "amount": -400 }
+      ],
+      "week_2": [
+        { "date": "2025-05-19", "description": "Salary", "amount": 4200 },
+        { "date": "2025-05-20", "description": "Groceries", "amount": -1200 },
+        { "date": "2025-05-21", "description": "Dining", "amount": -700 },
+        { "date": "2025-05-22", "description": "Bonus", "amount": 1500 },
+        { "date": "2025-05-23", "description": "Coffee", "amount": -150 },
+        { "date": "2025-05-24", "description": "Transfer", "amount": -900 },
+        { "date": "2025-05-25", "description": "Snacks", "amount": -300 }
+      ]
     }
   }
 }

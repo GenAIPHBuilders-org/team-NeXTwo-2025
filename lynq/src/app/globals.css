@@ -17,8 +17,9 @@
 body {
   background: url("../../public/background.svg");
   background-size: cover;
+  background-position: center;
   color: gray;
-  font-family: monospace,Arial, Helvetica, sans-serif;
+  font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 

@@ -1,3 +1,76 @@
+# A2A 
+
+---
+
+## 🧑‍💻 Getting Started
+- Clone the repo
+
+### Frontend (Next.js)
+
+1. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+2. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+3. Visit the app in your browser: [http://localhost:3000](http://localhost:3000)
+
+---
+
+### Backend (FastAPI)
+In another Terminal, follow these intructions..
+
+1. Navigate to the backend directory:
+
+    ```bash
+    cd src/backend/qore
+    ```
+
+2. Create a .venv file:
+
+    ```bash
+    python -m venv .venv
+    ```
+
+3. Activate your Python virtual environment:
+
+    ```bash
+    # macOS/Linux
+    source .venv/bin/activate
+
+    # Windows
+    .venv/Scripts/activate
+    
+    # Bash
+    source .venv/Scripts/activate
+    ```
+
+4. Install dependencies needed
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5. Run the FastAPI server:
+
+    ```bash
+    uvicorn api:app --reload
+    ```
+
+Goods na yan, then try to run Insights.
+
+---
+
+## 🗂 Project Structure
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

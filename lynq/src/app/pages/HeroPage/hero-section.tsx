@@ -38,7 +38,6 @@ export default function HeroSection() {
               Get Started
             </motion.button>
           </div>
-
           <LockDesign />
           <InfoCards />
         </div>
