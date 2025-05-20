@@ -94,7 +94,15 @@ In another Terminal, follow these intructions..
     cd lynq/src/backend/qore
     ```
 
-2. Create a .venv file:
+2. if you can access the venv file: 
+
+    ```bash
+    venv/Scripts/activate
+    ```
+
+    then skip #2.1..
+
+2.1 Create a .venv file:
 
     ```bash
     python -m venv .venv
