@@ -19,6 +19,13 @@ import CardInsights from "./cards/CardInsights";
 
 const cardConfigs = [
   {
+    key: "cashflow",
+    title: "Cash Flow",
+    description: "Visualize your income and expenses",
+    component: CardCashFlow,
+    icon: DollarSign,
+  },
+  {
     key: "budget",
     title: "Budget Overview",
     description: "Track your monthly spending against budget",
@@ -31,13 +38,6 @@ const cardConfigs = [
     description: "Monitor progress toward your financial goals",
     component: CardSavings,
     icon: PiggyBank,
-  },
-  {
-    key: "cashflow",
-    title: "Cash Flow",
-    description: "Visualize your income and expenses",
-    component: CardCashFlow,
-    icon: DollarSign,
   },
   {
     key: "insights",
@@ -53,16 +53,6 @@ export default function Dashboard() {
   const [modalOpen, setModalOpen] = useState(false);
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const router = useRouter(); // Initialize router
-
-  const user = {
-    name: "Juan Dela Cruz",
-    email: "juan.delacruz@example.com",
-    age: 40,
-    maritalStatus: "Married",
-    dependents: 2,
-    location: "Makati, Metro Manila",
-    jobTitle: "Mid-level IT Manager",
-  };
 
   const handleCardClick = (cardKey: string) => {
     // Only open modal for cards other than insights
@@ -176,9 +166,6 @@ export default function Dashboard() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">
-            Welcome back, {user.name.split(" ")[0]}
-          </h2>
           <p className="text-slate-500">
             Here's an overview of your financial health
           </p>
