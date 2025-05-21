@@ -1,0 +1,100 @@
+{
+  "user": {
+    "name": "Mark Anthony Reyes",
+    "demographics": {
+      "age": 32,
+      "gender": "Male",
+      "marital_status": "Single",
+      "dependents": 0,
+      "location": {
+        "city": "Quezon City",
+        "province": "Metro Manila",
+        "country": "Philippines"
+      }
+    },
+    "employment_income": {
+      "employment_status": "Employed",
+      "job_title": "Sales Executive",
+      "income_sources": ["Salary", "Commission"],
+      "monthly_income": 60000,
+      "income_frequency": "Monthly"
+    },
+    "expenses": {
+      "fixed_monthly_expenses": {
+        "rent": 15000,
+        "utilities": 3000,
+        "subscriptions": 2500,
+        "insurance": 1500
+      },
+      "variable_monthly_expenses": {
+        "groceries": 8000,
+        "transportation": 4000,
+        "entertainment": 5000,
+        "dining": 6000,
+        "shopping": 7000,
+        "gambling": 5000,
+        "luxury": 10000
+      }
+    },
+    "budget": {
+      "week_1": [
+        { "date": "2025-05-12", "description": "Luxury Watch", "amount": 9000 },
+        { "date": "2025-05-13", "description": "Dining", "amount": 800 },
+        { "date": "2025-05-14", "description": "Casino", "amount": 2000 },
+        { "date": "2025-05-15", "description": "Online Shopping", "amount": 1500 },
+        { "date": "2025-05-16", "description": "Taxi", "amount": 300 },
+        { "date": "2025-05-17", "description": "Snacks", "amount": 300 },
+        { "date": "2025-05-18", "description": "Bar", "amount": 1000 }
+      ],
+      "week_2": [
+        { "date": "2025-05-19", "description": "Clothing", "amount": 3000 },
+        { "date": "2025-05-20", "description": "Takeout", "amount": 1200 },
+        { "date": "2025-05-21", "description": "Casino", "amount": 3000 },
+        { "date": "2025-05-22", "description": "Luxury Cologne", "amount": 2500 },
+        { "date": "2025-05-23", "description": "Concert Ticket", "amount": 1800 },
+        { "date": "2025-05-24", "description": "Gacha Game", "amount": 1000 },
+        { "date": "2025-05-25", "description": "Coffee", "amount": 250 }
+      ]
+    },
+    "savings": {
+      "week_1": [
+        { "date": "2025-05-12", "description": "Deposit", "amount": 500 },
+        { "date": "2025-05-13", "description": "Emergency Fund", "amount": 1000 },
+        { "date": "2025-05-14", "description": "Withdraw", "amount": -1000 },
+        { "date": "2025-05-15", "description": "Deposit", "amount": 500 },
+        { "date": "2025-05-16", "description": "Transfer", "amount": -500 },
+        { "date": "2025-05-17", "description": "Interest", "amount": 100 },
+        { "date": "2025-05-18", "description": "Withdraw", "amount": -1500 }
+      ],
+      "week_2": [
+        { "date": "2025-05-19", "description": "Deposit", "amount": 700 },
+        { "date": "2025-05-20", "description": "Withdraw", "amount": -1000 },
+        { "date": "2025-05-21", "description": "Bonus", "amount": 500 },
+        { "date": "2025-05-22", "description": "Transfer to Wallet", "amount": -1200 },
+        { "date": "2025-05-23", "description": "Emergency Withdraw", "amount": -2000 },
+        { "date": "2025-05-24", "description": "Deposit", "amount": 800 },
+        { "date": "2025-05-25", "description": "Interest", "amount": 80 }
+      ]
+    },
+    "cashflow": {
+      "week_1": [
+        { "date": "2025-05-12", "description": "Salary", "amount": 2000 },
+        { "date": "2025-05-13", "description": "Casino", "amount": -2000 },
+        { "date": "2025-05-14", "description": "Payday Loan", "amount": 5000 },
+        { "date": "2025-05-15", "description": "Luxury Watch", "amount": -9000 },
+        { "date": "2025-05-16", "description": "Dining", "amount": -1000 },
+        { "date": "2025-05-17", "description": "Shopping", "amount": -2500 },
+        { "date": "2025-05-18", "description": "Loan Repayment", "amount": -3000 }
+      ],
+      "week_2": [
+        { "date": "2025-05-19", "description": "Commission", "amount": 3500 },
+        { "date": "2025-05-20", "description": "Online Shopping", "amount": -2000 },
+        { "date": "2025-05-21", "description": "Casino", "amount": -3000 },
+        { "date": "2025-05-22", "description": "Bonus", "amount": 2500 },
+        { "date": "2025-05-23", "description": "Coffee", "amount": -250 },
+        { "date": "2025-05-24", "description": "Uber", "amount": -400 },
+        { "date": "2025-05-25", "description": "App Game Spending", "amount": -800 }
+      ]
+    }
+  }
+}
