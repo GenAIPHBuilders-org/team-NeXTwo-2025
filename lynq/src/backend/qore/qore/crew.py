@@ -79,15 +79,28 @@ class Qore():
 
     @crew
     def crew(self) -> Crew:
-        """Creates the Qore crew"""
+        """Creates the Qore crew with agent-to-agent communication via task outputs"""
+        # Create tasks
+        cash_flow = self.cash_flow_task()
+        budget = self.budget_task()
+        savings = self.savings_task()
+        insights = self.insights_task()
+
+        # Agent to Agent tasks
+        budget.context = {"cash_flow_output": cash_flow.output}
+        savings.context = {
+            "cash_flow_output": cash_flow.output,
+            "budget_output": budget.output
+        }
+        insights.context = {
+            "cash_flow_output": cash_flow.output,
+            "budget_output": budget.output,
+            "savings_output": savings.output
+        }
+
         return Crew(
             agents=self.agents,
-            tasks=[
-                self.cash_flow_task(),
-                self.budget_task(),
-                self.savings_task(),
-                self.insights_task()
-            ],
+            tasks=[cash_flow, budget, savings, insights],
             process=Process.sequential,
             verbose=True
         )

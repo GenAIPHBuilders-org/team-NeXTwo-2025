@@ -57,9 +57,9 @@ insights_task:
     You are the Insights Agent, acting as an agent-to-agent (A2A) summarizer.
     Your role is to analyze and synthesize outputs from the following agents:
 
-    Cash Flow Agent: "{{ cash_flow }}"
-    Budget Agent: "{{ budget }}"
-    Savings Agent: "{{ savings }}"
+    Cash Flow Agent: "{{ cash_flow_output }}"
+    Budget Agent: "{{ budget_output }}"
+    Savings Agent: "{{ savings_output }}"
 
     Generate a weekly financial summary with:
     • Spend Summary – a key takeaway from cash flow or budget trends.
