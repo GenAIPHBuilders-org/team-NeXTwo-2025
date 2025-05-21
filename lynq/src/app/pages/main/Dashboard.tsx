@@ -172,110 +172,108 @@ export default function Dashboard() {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 gap-6 md:gap-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+  className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+  variants={containerVariants}
+  initial="hidden"
+  animate="visible"
+>
+  {cardConfigs.map((card, index) => {
+    const CardComponent = card.component;
+    const Icon = card.icon;
+
+    const isFullWidth = index >= 2;
+    const columnSpanClass = isFullWidth ? "md:col-span-2" : "";
+
+    if (card.key === "insights") {
+      return (
+        <motion.div
+          key={card.key}
+          variants={cardVariants}
+          custom={index}
+          layout
+          className={columnSpanClass}
         >
-          {cardConfigs.map((card, index) => {
-            const CardComponent = card.component;
-            const Icon = card.icon;
-
-            // Determine column span based on index:
-            // First two cards → 1 column each (in the first row)
-            // Remaining cards → span both columns (full width)
-            const isFullWidth = index >= 2;
-            const columnSpanClass = isFullWidth ? "col-span-2" : "";
-
-            if (card.key === "insights") {
-              return (
-                <motion.div
-                  key={card.key}
-                  variants={cardVariants}
-                  custom={index}
-                  layout
-                  className={columnSpanClass}
-                >
-                  <CardComponent />
-                </motion.div>
-              );
-            }
-
-            return (
-              <motion.div
-                key={card.key}
-                className={`bg-white rounded-lg border border-slate-200 overflow-hidden cursor-pointer min-h-[320px] flex flex-col ${columnSpanClass}`}
-                onClick={() => handleCardClick(card.key)}
-                variants={cardVariants}
-                whileHover="hover"
-                whileTap="tap"
-                custom={index}
-                layout
-              >
-                <div className="p-6 pb-2">
-                  <div className="flex items-center justify-between">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 500,
-                        delay: 0.2 + index * 0.1,
-                      }}
-                    >
-                      <Icon className="h-5 w-5 text-slate-500" />
-                    </motion.div>
-                    <motion.button
-                      className="h-8 w-8 rounded-full hover:bg-slate-100 flex items-center justify-center"
-                      whileHover={{ backgroundColor: "rgb(241 245 249)" }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <ChevronDown className="h-4 w-4 text-slate-400" />
-                    </motion.button>
-                  </div>
-                  <motion.h3
-                    className="text-base font-medium mt-2 text-slate-900"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3 + index * 0.1 }}
-                  >
-                    {card.title}
-                  </motion.h3>
-                  <motion.p
-                    className="text-xs text-slate-500"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                  >
-                    {card.description}
-                  </motion.p>
-                </div>
-                <motion.div
-                  className="p-6 pt-3 flex-grow"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 + index * 0.1 }}
-                >
-                  <div className="h-[200px] w-full">
-                    <CardComponent preview />
-                  </div>
-                </motion.div>
-                <div className="p-6 pt-2 flex justify-end">
-                  <motion.button
-                    className="text-sm px-4 py-2 rounded hover:bg-slate-100 text-slate-700 font-medium"
-                    whileHover={{
-                      scale: 1.05,
-                      backgroundColor: "rgb(241 245 249)",
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    View Details
-                  </motion.button>
-                </div>
-              </motion.div>
-            );
-          })}
+          <CardComponent />
         </motion.div>
+      );
+    }
+
+    return (
+      <motion.div
+        key={card.key}
+        className={`bg-white rounded-lg border border-slate-200 overflow-hidden cursor-pointer min-h-[320px] flex flex-col ${columnSpanClass}`}
+        onClick={() => handleCardClick(card.key)}
+        variants={cardVariants}
+        whileHover="hover"
+        whileTap="tap"
+        custom={index}
+        layout
+      >
+        <div className="p-6 pb-2">
+          <div className="flex items-center justify-between">
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{
+                type: "spring",
+                stiffness: 500,
+                delay: 0.2 + index * 0.1,
+              }}
+            >
+              <Icon className="h-5 w-5 text-slate-500" />
+            </motion.div>
+            <motion.button
+              className="h-8 w-8 rounded-full hover:bg-slate-100 flex items-center justify-center"
+              whileHover={{ backgroundColor: "rgb(241 245 249)" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <ChevronDown className="h-4 w-4 text-slate-400" />
+            </motion.button>
+          </div>
+          <motion.h3
+            className="text-base font-medium mt-2 text-slate-900"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 + index * 0.1 }}
+          >
+            {card.title}
+          </motion.h3>
+          <motion.p
+            className="text-xs text-slate-500"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 + index * 0.1 }}
+          >
+            {card.description}
+          </motion.p>
+        </div>
+        <motion.div
+          className="p-6 pt-3 flex-grow"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 + index * 0.1 }}
+        >
+          <div className="h-[200px] w-full">
+            <CardComponent preview />
+          </div>
+        </motion.div>
+        <div className="p-6 pt-2 flex justify-end">
+          <motion.button
+            className="text-sm px-4 py-2 rounded hover:bg-slate-100 text-slate-700 font-medium"
+            whileHover={{
+              scale: 1.05,
+              backgroundColor: "rgb(241 245 249)",
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View Details
+          </motion.button>
+        </div>
+      </motion.div>
+    );
+  })}
+</motion.div>
+
       </main>
 
       {/* Modal for detailed view (only for non-insights cards) */}
